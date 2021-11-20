@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\websitegit",
+    "\\websitegit\\src",
+    "\\websitegit\\src\\assets",
+    "\\websitegit\\src\\assets\\styles",
+    "\\websitegit\\src\\assets\\styles\\materialize",
+    "\\websitegit\\src\\assets\\styles\\materialize\\sass",
+    "\\websitegit\\src\\assets\\styles\\materialize\\sass\\components",
+    "\\websitegit\\src\\components",
+    "\\websitegit\\src\\components\\auth"
+  ],
+  "SelectedNode": "\\websitegit\\src\\components\\auth\\ForgottenPasword.js",
+  "PreviewInSolutionExplorer": false
+}

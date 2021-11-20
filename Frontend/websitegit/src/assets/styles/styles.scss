@@ -1,0 +1,23 @@
+
+
+// // Colores
+@import './base/settings';
+
+// components
+    @import './components/buttons';
+    @import './components/sidebar';
+    @import './components/navbar';
+    @import './components/homescreen';
+    @import './components/style_login';
+    @import './components/loginScreen';
+    @import './components/cards';
+    @import './components/register';
+    @import './components/forgottenPassword';
+    @import './components/changePassword';
+    @import './components/toast';
+    @import './components/uerProfile';
+
+// base estandar
+@import './base/base';
+
+

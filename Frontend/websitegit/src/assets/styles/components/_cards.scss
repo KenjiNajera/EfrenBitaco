@@ -1,0 +1,301 @@
+//Card Filter
+.Content-Filter{
+    width: 24vh;
+    height: 89vh;
+    background-color: $Color-White;
+    box-shadow: 0 0 px rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+    margin-left: 1%;
+    margin-top: 1%;
+    label {
+        color:#434E65;
+    }
+    span {
+        color: #434E65;
+    }
+}
+.Filter{
+    padding: 10%;
+    margin-left: 32%;
+    font-size: 1.5vw;
+}
+.Name-skills {
+    background-color:  $Color-base; 
+    color: black;
+    border-radius: 5px;
+    width: 85%;
+    height: 4%;
+    margin-left: 8%;
+    font-size: 1.1vw;
+    center{
+        color:#434E65;
+    }
+}
+.Cardscroll {
+    overflow-y: auto;
+    width: 85%;
+    height: 13%;
+    margin-left: 8%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    label{
+        font-size: 1vw;
+    }
+}
+.Cardscroll::-webkit-scrollbar {
+    width: 5px;
+    max-width: 3%;
+    min-width: 3%;
+  }
+  .Cardscroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .Cardscroll::-webkit-scrollbar-thumb {
+    background-color: $Primary-color;
+    border-radius: 10px;
+    -webkit-box-shadow: rgba(0,0,0,.12) 0 3px 13px 1px;
+  }
+
+//Card Navbar
+.cardnavbar{
+    overflow: hidden;
+    background-color: $Color-base;
+    width: 94.4%;
+    height: 6%;
+    margin-bottom: 1vh;
+    margin-top: 2.2vh;
+    margin-left: 1vh;
+    input[type=image]  {
+        float: left;
+    }
+    input[type=image]:active  {
+        background-color: $Color-White;
+        border-radius: 30%;
+    }
+}
+.Buscador{
+    .search-container {
+        float: right;
+      }
+    input[type=text] {
+        padding: 1.5%;
+        margin-top: 3%;
+        font-size: 2.5vh;
+        border: none;
+        color:  $Primary-color;
+        margin-left: -3%;
+      }
+      button {     
+        padding: 6px 10px;
+        margin-right: 2px;
+        background: #ddd;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+        max-width: 5.3vh;
+      }
+      button:hover {
+        background: #ccc;
+      }
+}
+.ImageAdd{
+    margin-top: .4%;;
+    margin-left: 8%;
+}
+.ImageDelete{
+    margin-top: .4%;
+    margin-left: 2%;
+}
+
+//Cards del area trabajadores
+.cardG {
+  overflow-y: auto;
+  width: 83.5%;
+  height: 70vh;
+  background-color: $Color-base;
+  margin-left: 1vh;
+  box-shadow: 0 0 px rgba(0, 0, 0, 0.8);
+  padding: 6vh 10vh;
+  
+}
+.cardG::-webkit-scrollbar {
+  width: 1vh;
+  max-width: 1vh;
+  min-width: 1vh;
+}
+.cardG::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.cardG::-webkit-scrollbar-thumb {
+  background-color: $Primary-color;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0,0,0,.12) 0 3px 13px 1px;
+}
+
+
+//Carda de los trabajadores
+.cardEmploye {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 50vh;
+  height: 37vh;
+  border-radius: 5px;
+  background-color: $Primary-color;
+  min-width: 26vh;
+  max-width: 26vh;
+  max-height: 70vh;
+  img {
+    border-radius: 5px 5px 0 0;
+    width: 26vh;
+  }
+}
+.cardEmploye:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+  padding: 2px 16px;
+  label{
+    color: white;
+    font-size: .9vw;
+    display: block;
+  }
+  i {
+    position: absolute;
+    color: $Primary-color;
+    font-size: 1.2vw;
+    margin-top: .6vw;
+    margin-left: 2vw;  
+  }
+  input {
+    box-sizing: border-box;
+    width: 46%;
+    height: 4vh;
+    border-radius: .2vw;
+    border: 1px solid white;
+    color: $Color-White;
+    outline: none;
+    margin-top: 2%;
+    &:hover {
+      background-color: $Button-hover;
+      border: 1px solid $Button-hover;   
+    }
+  }
+  .mov{
+    margin-left: 8%;
+  }
+  .icono{
+    margin-left: 2.5%;
+  }
+}
+
+
+
+
+
+
+
+//Division de los elements del card Employee
+  .principal {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+    
+  }
+  .secundario{
+    display: flex;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+  }
+  .contmain {
+    width: 100%;
+    height: 100%;
+    background-color: #EBEBEB;
+  }
+
+
+  //CardCliente
+  .cardClient {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 50vh;
+    height: 27vh;
+    border-radius: 5px;
+    background-color: $Color-White;
+    min-width: 26vh;
+    max-width: 26vh;
+    max-height: 70vh;
+    display: inline-block;
+    margin-left: 1.5%;
+    margin-top: 1%;
+    img {
+      border-radius: 5px 5px 0 0;
+      width: 26vh;
+    }
+  }
+  .cardClient:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .containerClient {
+    padding: 2px 16px;
+    label{
+      color: $Grey-color;
+      font-size: 1.5vw;
+      display: block;
+    }
+  }
+  
+
+
+   //CardRequest
+   .CardRequest {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 55vh;
+    height: 27vh;
+    border-radius: 5px;
+    background-color: $Color-White;
+    // min-width: 26vh;
+    // max-width: 26vh;
+    max-height: 70vh;
+    display: inline-block;
+    margin-left: 1.5%;
+    margin-bottom: 2%;
+    img {
+      border-radius: 100%;
+      width: 10vh;
+      height: 10vh;
+      display: inline-block;
+      margin-left: 3%;
+      margin-top: 2%;
+    }
+    .name{
+      display: inline-block;
+      margin-left: 3%;
+      margin-top: -11%;
+      font-size:1.3vw;
+    }
+  }
+  .CardRequest:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .containerClient {
+    padding: 2px 16px;
+    label{
+      color: $Grey-color;
+      font-size: 1.5vw;
+      display: inline-block;
+      margin-left: 12%;
+    }
+  }
+  .Container-Description{
+    font-size: 10vh;
+    padding-left: 8%;
+    .Description{
+      font-size: 1.2vw;
+    }
+  }
+  

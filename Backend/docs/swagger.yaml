@@ -1,0 +1,395 @@
+basePath: /v2
+definitions:
+  model.Authenticate:
+    properties:
+      id:
+        example: 1
+        type: integer
+      resourcedataid:
+        example: 1
+        type: integer
+      roleid:
+        example: 2
+        type: integer
+      rolename:
+        type: string
+      status:
+        type: boolean
+    type: object
+  model.AuthenticateMovil:
+    properties:
+      id:
+        example: 1
+        type: integer
+      resourcedataid:
+        example: 1
+        type: integer
+      roleid:
+        example: 2
+        type: integer
+      status:
+        type: boolean
+    type: object
+  model.ChangePassword:
+    properties:
+      hashuserid:
+        example: 8b459f91bacc7157222c4c1894c7229ae2d58eec745084bfdf1aa87b65
+        type: string
+      newpassword:
+        example: ex@ample16
+        type: string
+    type: object
+  model.Language:
+    properties:
+      id:
+        example: 0
+        type: integer
+      languagename:
+        example: Español
+        type: string
+    type: object
+  model.Login:
+    properties:
+      email:
+        example: example@grupogit.com
+        type: string
+      password:
+        example: example15
+        type: string
+    type: object
+  model.LoginMovil:
+    properties:
+      email:
+        example: example@grupogit.com
+        type: string
+      password:
+        example: example15
+        type: string
+      tokenmovil:
+        type: string
+    type: object
+  model.RecoveryPassword:
+    properties:
+      email:
+        example: example@grupogit.com
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: contacto@grupogit.com
+    name: Grupo GIT
+    url: http://www.grupogit.com/
+  description: This is a api rest full.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Grupo GIT API
+  version: "1.0"
+paths:
+  /auth/authenticate/:
+    post:
+      consumes:
+      - application/json
+      description: get datos del usuario
+      parameters:
+      - description: Necesita un objeto
+        in: body
+        name: objeto
+        required: true
+        schema:
+          $ref: '#/definitions/model.Login'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Authenticate'
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+        default:
+          description: error
+          schema:
+            type: string
+      summary: Authenticación de usuarios
+      tags:
+      - auth
+  /auth/authenticatemovil/:
+    post:
+      consumes:
+      - application/json
+      description: get datos del usuario en la aplicación movil
+      parameters:
+      - description: Necesita un objeto
+        in: body
+        name: objeto
+        required: true
+        schema:
+          $ref: '#/definitions/model.LoginMovil'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.AuthenticateMovil'
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+        default:
+          description: error
+          schema:
+            type: string
+      summary: Authenticación de usuarios en app movil
+      tags:
+      - auth
+  /auth/change+password/:
+    post:
+      consumes:
+      - application/json
+      description: Recibe el id hasheado del solicitante de verificación de cuenta
+        y valida si el usario ya esta verificado o no.s
+      parameters:
+      - description: Necesita un objeto
+        in: body
+        name: objeto
+        required: true
+        schema:
+          $ref: '#/definitions/model.ChangePassword'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Retorna un true
+          schema:
+            type: boolean
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+        default:
+          description: error
+          schema:
+            type: string
+      summary: Verificación de Usaurios nuevos
+      tags:
+      - auth
+  /auth/recovery+password/:
+    post:
+      consumes:
+      - application/json
+      description: Envia un email al correo del usuario solicitante
+      parameters:
+      - description: Necesita un objeto
+        in: body
+        name: objeto
+        required: true
+        schema:
+          $ref: '#/definitions/model.RecoveryPassword'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Retorna un true
+          schema:
+            type: boolean
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+        default:
+          description: error
+          schema:
+            type: string
+      summary: Recuperacion de contraseñas
+      tags:
+      - auth
+  /language/create/:
+    post:
+      consumes:
+      - application/json
+      description: Agrega un nuevo idioma.
+      parameters:
+      - description: Necesita un objeto
+        in: body
+        name: objeto
+        required: true
+        schema:
+          $ref: '#/definitions/model.Language'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Retorna el id del idioma creado
+          schema:
+            type: integer
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+        default:
+          description: error
+          schema:
+            type: string
+      summary: Agregar Idioma.
+      tags:
+      - language
+  /language/delete/:id:
+    delete:
+      consumes:
+      - application/json
+      description: Elimina algun idioma Existente.
+      parameters:
+      - description: Language ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Retorna un true
+          schema:
+            type: boolean
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+        default:
+          description: error
+          schema:
+            type: string
+      summary: Elimina idioma existente.
+      tags:
+      - language
+  /language/languages/:
+    get:
+      consumes:
+      - application/json
+      description: Retorna un Array de Idiomas.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Retorna un array de idiomas
+          schema:
+            items:
+              $ref: '#/definitions/model.Language'
+            type: array
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+        default:
+          description: error
+          schema:
+            type: string
+      summary: Lista de los idiomas existentes.
+      tags:
+      - language
+  /language/update/:id:
+    put:
+      consumes:
+      - application/json
+      description: Modifica el dato del idioma registrado.
+      parameters:
+      - description: Language ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Necesita un objeto
+        in: body
+        name: objeto
+        required: true
+        schema:
+          $ref: '#/definitions/model.Language'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Retorna un true
+          schema:
+            type: boolean
+        "400":
+          description: error
+          schema:
+            type: string
+        "404":
+          description: error
+          schema:
+            type: string
+        "500":
+          description: error
+          schema:
+            type: string
+        default:
+          description: error
+          schema:
+            type: string
+      summary: Modificar datos del idioma.
+      tags:
+      - language
+swagger: "2.0"

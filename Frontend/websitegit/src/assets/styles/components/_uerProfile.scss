@@ -1,0 +1,32 @@
+.Content-Settings{
+    width: 29vh;
+    height: 35vh;
+    background-color: $Color-White;
+    box-shadow: 0 0 px rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+    margin-left: 1%;
+    margin-top: 1%;
+    label {
+        color:#434E65;
+    }
+}
+.settings{
+    padding: 4%;
+    font-size: 1.2vw;
+    margin-left: 12%;
+    font-weight: 700;
+}
+
+
+
+//CardProfile
+.card-profile {
+    width: 83.2%;
+    height: 77vh;
+    background-color: $Color-White;
+    margin-left: 1vh;
+    margin-top:2vh;
+    box-shadow: 0 0 px rgba(0, 0, 0, 0.8);
+    padding: 6vh 10vh;
+    
+}

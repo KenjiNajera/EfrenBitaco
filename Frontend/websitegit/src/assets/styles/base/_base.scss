@@ -1,0 +1,108 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0px;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background: $Color-base;
+}
+
+.mt-1 {
+    margin-top: 5px;
+}
+
+.mt-5 {
+    margin-top: 20px;
+}
+
+.mb-1 {
+    margin-bottom: 5px;
+}
+
+.mb-5 {
+    margin-bottom: 20px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+.foundColor{
+    background-color:$Primary-color;
+}
+.content-center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Pantalla universal del home movile de 200% para arriba
+@media only screen and (max-width: 1000px) {
+    body {
+        min-width: 100%;
+    }
+
+    .sidebar-content-disable,
+    .sidebar-content-activated {
+        display: none;
+    }
+
+    .logo-content {
+        img {
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        max-height: 300px;
+        min-width: 250px;
+        min-height: 250px;
+        opacity: 50%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    body {
+        min-width: 100%;
+    }
+
+    .logo-content {
+        img {
+        width: 100%;
+        height: 100%;
+        max-width: 70%;
+        max-height: 70%;
+        min-width: 250px;
+        min-height: 250px;
+        opacity: 50%;
+       
+        }
+    }
+}
+
+@media only screen and (max-width: 1824px){
+    body {
+        min-width: 100%;
+    }
+
+    .logo-content {
+        img {
+        width: 100%;
+        height: 100%;
+        max-width: 70%;
+        max-height: 70%;
+        min-width: 250px;
+        min-height: 250px;
+        opacity: 50%;
+       
+        }
+    }
+}
+
